@@ -7,6 +7,11 @@ import logo from '../../assets/tuklas-logo.png';
 import exploreIcon from '../../assets/explore-icon.png';
 import learnIcon from '../../assets/learn-icon.png';
 import connectIcon from '../../assets/connect-icon.png';
+import aboutIcon from '../../assets/about.png';
+import techHubIcon from '../../assets/tech-hub.png';
+import chatIcon from '../../assets/chat.png';
+import futureIcon from '../../assets/future.png';
+import setCompetition from '../../assets/set-competition.png'; // Import the portrait image
 
 const HomeScreen: React.FC = () => {
   return (
@@ -20,30 +25,44 @@ const HomeScreen: React.FC = () => {
 
       {/* Feature Highlights */}
       <View style={styles.featuresContainer}>
-        <TouchableOpacity style={styles.feature} onPress={() => {}}>
-          <Link href="/explore" style={styles.feature}>
-            <Image source={exploreIcon} style={styles.icon} />
-            <Text style={styles.featureText}>Explore Topics</Text>
-          </Link>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.feature} onPress={() => {}}>
-          <Link href="/learn" style={styles.feature}>
-            <Image source={learnIcon} style={styles.icon} />
-            <Text style={styles.featureText}>Learn at Your Pace</Text>
-          </Link>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.feature} onPress={() => {}}>
-          <Link href="/mentors" style={styles.feature}>
-            <Image source={connectIcon} style={styles.icon} />
-            <Text style={styles.featureText}>Connect with Mentors</Text>
-          </Link>
-        </TouchableOpacity>
+        <Link href="/explore" style={styles.feature}>
+          <Image source={exploreIcon} style={styles.icon} />
+          <Text style={styles.featureText}>Explore Topics</Text>
+        </Link>
+        <Link href="/learn" style={styles.feature}>
+          <Image source={learnIcon} style={styles.icon} />
+          <Text style={styles.featureText}>Learn at Your Pace</Text>
+        </Link>
+        <Link href="/mentors" style={styles.feature}>
+          <Image source={connectIcon} style={styles.icon} />
+          <Text style={styles.featureText}>Connect with Mentors</Text>
+        </Link>
       </View>
 
-      {/* Get Started Button */}
-      <Link href="/about" style={styles.button}>
-        <Text style={styles.buttonText}>Learn More About Tuklas</Text>
-      </Link>
+      <View style={styles.featuresContainer}>
+        <Link href="/about" style={styles.feature}>
+          <Image source={aboutIcon} style={styles.icon} />
+          <Text style={styles.featureText}>About Tuklas</Text>
+        </Link>
+        <Link href="/tech-hub" style={styles.feature}>
+          <Image source={techHubIcon} style={styles.icon} />
+          <Text style={styles.featureText}>Technology Hub</Text>
+        </Link>
+        <Link href="/chat" style={styles.feature}>
+          <Image source={chatIcon} style={styles.icon} />
+          <Text style={styles.featureText}>Chat with AI</Text>
+        </Link>
+      </View>
+
+      <View style={styles.featuresContainer}>
+        <Link href="/future-works" style={styles.feature}>
+          <Image source={futureIcon} style={styles.icon} />
+          <Text style={styles.featureText}>Future Works</Text>
+        </Link>
+      </View>
+
+      {/* Portrait Image at the Bottom */}
+      <Image source={setCompetition} style={styles.portrait} />
     </View>
   );
 };
@@ -57,8 +76,8 @@ const styles = StyleSheet.create({
     paddingVertical: 40,
   },
   logo: {
-    width: 120,  // Increased size
-    height: 120, // Increased size
+    width: 120,
+    height: 120,
     marginBottom: 20,
   },
   title: {
@@ -85,8 +104,8 @@ const styles = StyleSheet.create({
     width: 80,
   },
   icon: {
-    width: 50,
-    height: 50,
+    width: 100,
+    height: 100,
     marginBottom: 10,
   },
   featureText: {
@@ -99,11 +118,50 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 50,
     borderRadius: 25,
+    marginTop: 20,
   },
   buttonText: {
     color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  techHubButton: {
+    backgroundColor: '#007bff',
+    padding: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  techHubText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  linkText: {
+    textDecorationLine: 'none',
+  },
+  portrait: {
+    width: 180,  // Adjust the size as needed
+    height: 280, // Adjust the height for the portrait format
+    margin: 20,
+    padding: 20,
+  },
+  chatButton: {
+    backgroundColor: '#007bff',
+    paddingVertical: 12,
+    paddingHorizontal: 30,
+    borderRadius: 25,
+    alignItems: 'center',
+    marginTop: 20,
+    marginBottom: 10,
+    width: '80%',
+    alignSelf: 'center',
+  },
+  chatButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
