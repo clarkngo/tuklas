@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import { Link } from 'expo-router';
 
 const mentors = [
   {
@@ -8,7 +9,8 @@ const mentors = [
     bio: 'AI Engineer and Software Developer with a strong background in building RAG systems, IT consulting, and full-stack development.',
     skills: ['AI & Machine Learning', 'Full-Stack Development', 'Data Engineering'],
     image: require('../../assets/clark-ngo.png'), // Corrected image path
-    linkedin: 'https://www.linkedin.com/in/clarkngo' // LinkedIn URL for Clark
+    linkedin: 'https://www.linkedin.com/in/clarkngo', // LinkedIn URL for Clark
+    page: 'clark'
   },
   {
     id: '2',
@@ -16,7 +18,8 @@ const mentors = [
     bio: 'Founder, event manager, and creative director with expertise in event production, project management, and social media marketing.',
     skills: ['Event Management', 'Project Coordination', 'Creative Direction'],
     image: require('../../assets/christine-emano.png'), // Corrected image path
-    linkedin: 'https://www.linkedin.com/in/christineemano' // LinkedIn URL for Christine
+    linkedin: 'https://www.linkedin.com/in/christineemano', // LinkedIn URL for Christine
+    page: 'christine'
   }
 ];
 
@@ -24,29 +27,37 @@ const MentorsScreen: React.FC = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {mentors.map((mentor) => (
-        <View key={mentor.id} style={styles.card}>
-          <Image source={mentor.image} style={styles.image} />
-          <Text style={styles.name}>{mentor.name}</Text>
-          <Text style={styles.bio}>{mentor.bio}</Text>
-          <View style={styles.skillsContainer}>
-            {mentor.skills.map((skill, index) => (
-              <Text key={index} style={styles.skill}>
-                {skill}
-              </Text>
-            ))}
-          </View>
-          {/* LinkedIn Button */}
-          {mentor.linkedin && (
-            <TouchableOpacity
-              onPress={() => Linking.openURL(mentor.linkedin)}
-              style={styles.linkedinButton}
-            >
-              <Text style={styles.linkedinText}>Connect on LinkedIn</Text>
-            </TouchableOpacity>
-          )}
-        </View>
-      ))}
-    </ScrollView>
+        <TouchableOpacity 
+          key={mentor.id} 
+          style={styles.card} 
+          onPress={() => {/* Navigate to mentor detail page */}
+          }>
+          <Link href={`/mentor/${mentor.page}`} asChild>
+            <View key={mentor.id} style={styles.card}>
+              <Image source={mentor.image} style={styles.image} />
+              <Text style={styles.name}>{mentor.name}</Text>
+              <Text style={styles.bio}>{mentor.bio}</Text>
+              <View style={styles.skillsContainer}>
+                {mentor.skills.map((skill, index) => (
+                  <Text key={index} style={styles.skill}>
+                    {skill}
+                  </Text>
+                ))}
+              </View>
+              {/* LinkedIn Button */}
+              {mentor.linkedin && (
+                <TouchableOpacity
+                  onPress={() => Linking.openURL(mentor.linkedin)}
+                  style={styles.linkedinButton}
+                >
+                  <Text style={styles.linkedinText}>Connect on LinkedIn</Text>
+                </TouchableOpacity>
+              )}
+            </View>
+          </Link>
+        </TouchableOpacity>
+        ))}
+      </ScrollView>
   );
 };
 
