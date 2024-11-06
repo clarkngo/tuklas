@@ -27,9 +27,9 @@ Tuklas is built with the mission of bridging the gap between skilled CityU stude
 
 Click the image below to watch a video demo of Tuklas in action on YouTube:
 
-[![Tuklas Demo](./assets/tuklas-demo.png)](https://www.youtube.com/watch?v=tRSRsKFUHuM)
+[![Tuklas Demo](./assets/tuklas-demo.png)](https://youtu.be/G_OPhw06bQ8)
 
-> [Watch the Demo on YouTube](https://www.youtube.com/watch?v=tRSRsKFUHuM)
+> [Watch the Demo on YouTube](https://youtu.be/G_OPhw06bQ8)
 
 ---
 
@@ -94,6 +94,26 @@ Click the image below to watch a video demo of Tuklas in action on YouTube:
 Open the app on your phone with the Expo Go app or in an emulator.
 
 
+---
+
+
+## Running the Project 
+1. **Run the Ollama Serve**:
+   ```bash
+   ollama serve
+   ```
+
+2. **Run the Proxy Server**:
+   ```bash
+   cd proxy-server
+   npm start
+   ```
+
+2. **Run the Mobile Frontend**:
+   ```bash
+   cd TuklasApp
+   npx expo start --web
+   ```
 ---
 
 

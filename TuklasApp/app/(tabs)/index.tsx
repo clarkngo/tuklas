@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 
 // Import logo and feature icons
@@ -15,13 +15,13 @@ import setCompetition from '../../assets/set-competition.png'; // Import the por
 
 const HomeScreen: React.FC = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       {/* Logo */}
       <Image source={logo} style={styles.logo} />
       
       {/* Welcome Message */}
-      <Text style={styles.title}>Welcome to Tuklas!</Text>
-      <Text style={styles.subtitle}>Discover new skills and knowledge with a fun and engaging experience.</Text>
+      <Text style={styles.title}>Tuklas</Text>
+      <Text style={styles.subtitle}>Where Curiosity Leads to Connection.</Text>
 
       {/* Feature Highlights */}
       <View style={styles.featuresContainer}>
@@ -63,13 +63,13 @@ const HomeScreen: React.FC = () => {
 
       {/* Portrait Image at the Bottom */}
       <Image source={setCompetition} style={styles.portrait} />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: '#f0f4f7',
     alignItems: 'center',
     paddingHorizontal: 20,
@@ -141,8 +141,8 @@ const styles = StyleSheet.create({
     textDecorationLine: 'none',
   },
   portrait: {
-    width: 180,  // Adjust the size as needed
-    height: 280, // Adjust the height for the portrait format
+    width: 180,  
+    height: 280, 
     margin: 20,
     padding: 20,
   },
