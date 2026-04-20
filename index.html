@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tuklas</title>
+    <title>Tuklas – Where Curiosity Leads to Connection</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,135 +13,361 @@
                 <img src="assets/tuklas-logo.png" alt="Tuklas Logo">
                 <h1>Tuklas</h1>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="#mentors">Mentors</a></li>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#explore" class="nav-link">Explore</a></li>
+                <li><a href="#mentors" class="nav-link">Mentors</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="nav-cta" id="nav-book-btn">Book a Session</button></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- HOME -->
         <section id="home">
             <div class="hero">
-                <h2>Tuklas</h2>
-                <p>Where Curiosity Leads to Connection.</p>
+                <div class="hero-text">
+                    <span class="hero-tag">City University of Seattle</span>
+                    <h2>Discover Your <span class="accent">Next Mentor</span></h2>
+                    <p>Tuklas connects you with CityU graduate students and faculty for one-on-one sessions and group workshops — tailored to your goals.</p>
+                    <div class="hero-actions">
+                        <a href="#explore" class="btn btn-primary scroll-link">Explore Topics</a>
+                        <a href="#mentors" class="btn btn-outline scroll-link">Meet Mentors</a>
+                        <button class="btn btn-ghost" id="hero-match-btn">Find My Match ✦</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/clark-and-christine.png" alt="Clark and Christine, Tuklas mentors">
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-num">2</span>
+                    <span class="stat-label">Expert Mentors</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">10</span>
+                    <span class="stat-label">Topics Available</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">1:1</span>
+                    <span class="stat-label">& Group Sessions</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">AI</span>
+                    <span class="stat-label">Powered Matching</span>
+                </div>
             </div>
         </section>
 
+        <!-- ABOUT -->
         <section id="about">
-            <h2>About Tuklas</h2>
-            <div class="about-content">
-                <h3>Tuklas - Why the Name and Logo</h3>
-                <p>"Tuklas" means "discover" in Filipino, capturing the essence of a quest for new knowledge or skills. The logo draws inspiration from the Philippines' rich history and cultural heritage.</p>
-                <img src="assets/magellan-discovery.png" alt="Magellan Discovery">
-                <p>Our journey towards discovery resonates with the story of Magellan's expedition reaching the Philippines, symbolizing exploration and uncovering new frontiers.</p>
-                <img src="assets/tinikling-dance.png" alt="Tinikling Dance">
-                <p>Additionally, our logo takes inspiration from "Tinikling" — a traditional Filipino dance that requires coordination, adaptability, and rhythm.</p>
-
-                <h3>The Problem and Our Goals</h3>
-                <p>There’s a gap between talented CityU graduate students with specialized skills and the communities that could benefit from their knowledge. Our goal is to bridge this gap by connecting CityU students and faculty with individuals seeking knowledge.</p>
-                <img src="assets/clark-and-christine.png" alt="Clark and Christine">
-
-                <h3>Our Solution</h3>
-                <p>We envision a platform that enables users to book one-on-one sessions or group workshops led by CityU students and faculty. To enhance the user experience, we incorporate an AI-powered Personalized Recommendation feature.</p>
-                <img src="assets/workshop.png" alt="Workshop">
-
-                <h3>Technical Implementation</h3>
-                <p>Our platform’s technical foundation includes modern web and mobile technologies, with a backend that supports scalable, AI-driven recommendations.</p>
-                <img src="assets/technical-implementation.png" alt="Technical Implementation">
+            <div class="section-header">
+                <h2>About Tuklas</h2>
+                <p class="section-subtitle">Bridging knowledge and community through mentorship</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <img src="assets/magellan-discovery.png" alt="Magellan Discovery">
+                    <div>
+                        <h3>Why "Tuklas"?</h3>
+                        <p>"Tuklas" means <em>discover</em> in Filipino — capturing the spirit of a quest for new knowledge. Our name echoes Magellan's expedition reaching the Philippines, symbolizing exploration and uncovering new frontiers.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <img src="assets/tinikling-dance.png" alt="Tinikling Dance">
+                    <div>
+                        <h3>Our Logo</h3>
+                        <p>The logo draws from the <em>Tinikling</em> — a traditional Filipino dance requiring coordination, adaptability, and rhythm. These same qualities define a great learning journey.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <img src="assets/workshop.png" alt="Workshop">
+                    <div>
+                        <h3>The Problem We Solve</h3>
+                        <p>There is a gap between talented CityU graduate students with specialized skills and the communities that could benefit from their knowledge — startups, nonprofits, retirees, and career switchers.</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <img src="assets/technical-implementation.png" alt="Technical Implementation">
+                    <div>
+                        <h3>Our Solution</h3>
+                        <p>A platform to book one-on-one sessions or group workshops with CityU students and faculty. An AI-powered recommendation engine helps you find the session that best fits your goals.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- EXPLORE -->
         <section id="explore">
-            <h2>Explore Topics</h2>
-            <div class="topics-container">
-                <div class="topic-card">
+            <div class="section-header">
+                <h2>Explore Topics</h2>
+                <p class="section-subtitle">Browse expertise across technology, business, and creative fields</p>
+            </div>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Topics</button>
+                <button class="filter-btn" data-filter="clark">Clark Ngo</button>
+                <button class="filter-btn" data-filter="christine">Christine Emano</button>
+            </div>
+            <div class="topics-container" id="topics-grid">
+                <div class="topic-card" data-mentors="clark">
+                    <div class="topic-icon">⚙️</div>
                     <h3>AI & Machine Learning</h3>
-                    <p>Dive into the world of artificial intelligence and machine learning. Learn about how AI models are built, trained, and deployed, including advanced techniques for creating intelligent systems.</p>
-                    <p><strong>Mentors:</strong> Clark Ngo</p>
+                    <p>Build, train, and deploy AI models. From classical ML to advanced deep learning and RAG systems.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag clark">Clark Ngo</span>
+                        <button class="topic-book-btn" data-topic="AI & Machine Learning" data-mentor="Clark Ngo">Book →</button>
+                    </div>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card" data-mentors="clark">
+                    <div class="topic-icon">💻</div>
                     <h3>Full-Stack Development</h3>
-                    <p>Explore full-stack development, covering both frontend and backend technologies. Understand how to build complete web and mobile applications from the ground up.</p>
-                    <p><strong>Mentors:</strong> Clark Ngo</p>
+                    <p>Build complete web and mobile applications from frontend to backend — React, Node, FastAPI, and beyond.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag clark">Clark Ngo</span>
+                        <button class="topic-book-btn" data-topic="Full-Stack Development" data-mentor="Clark Ngo">Book →</button>
+                    </div>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card" data-mentors="clark">
+                    <div class="topic-icon">🗄️</div>
                     <h3>Data Engineering</h3>
-                    <p>Learn the essentials of data engineering, including data pipeline design, data transformation, and storage solutions. This topic focuses on managing and structuring data effectively.</p>
-                    <p><strong>Mentors:</strong> Clark Ngo</p>
+                    <p>Design data pipelines, transform and store data effectively. Essential skills for modern data-driven teams.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag clark">Clark Ngo</span>
+                        <button class="topic-book-btn" data-topic="Data Engineering" data-mentor="Clark Ngo">Book →</button>
+                    </div>
                 </div>
-                <div class="topic-card">
-                    <h3>Event Management</h3>
-                    <p>Get insights into event planning, from coordinating logistics to managing budgets and collaborating with vendors. Ideal for those interested in organizing successful events and brand activations.</p>
-                    <p><strong>Mentors:</strong> Christine Emano</p>
-                </div>
-                <div class="topic-card">
-                    <h3>Project Coordination</h3>
-                    <p>Understand the fundamentals of project coordination, including setting timelines, managing resources, and working with cross-functional teams to achieve project goals.</p>
-                    <p><strong>Mentors:</strong> Christine Emano, Clark Ngo</p>
-                </div>
-                <div class="topic-card">
-                    <h3>Creative Direction</h3>
-                    <p>Explore the art of creative direction, where you’ll learn to craft visual stories and brand identities. This includes skills in concept development, storytelling, and guiding creative projects from inception to completion.</p>
-                    <p><strong>Mentors:</strong> Christine Emano</p>
-                </div>
-                <div class="topic-card">
-                    <h3>Social Media Management</h3>
-                    <p>Discover strategies for managing and growing social media accounts. Learn about content creation, audience engagement, and analytics to build a compelling social media presence.</p>
-                    <p><strong>Mentors:</strong> Christine Emano</p>
-                </div>
-                <div class="topic-card">
-                    <h3>Production Management</h3>
-                    <p>Gain knowledge in overseeing production processes, whether for events, video, or print. This involves budgeting, scheduling, and ensuring that all deliverables meet quality standards.</p>
-                    <p><strong>Mentors:</strong> Christine Emano</p>
-                </div>
-                <div class="topic-card">
+                <div class="topic-card" data-mentors="clark">
+                    <div class="topic-icon">🚀</div>
                     <h3>DevOps</h3>
-                    <p>An introduction to DevOps practices, including managing deployment pipelines, automating workflows, and monitoring applications. This topic is essential for modern software development.</p>
-                    <p><strong>Mentors:</strong> Clark Ngo</p>
+                    <p>Deployment pipelines, workflow automation, and application monitoring. Essential for modern software teams.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag clark">Clark Ngo</span>
+                        <button class="topic-book-btn" data-topic="DevOps" data-mentor="Clark Ngo">Book →</button>
+                    </div>
                 </div>
-                <div class="topic-card">
+                <div class="topic-card" data-mentors="clark christine">
+                    <div class="topic-icon">📋</div>
+                    <h3>Project Coordination</h3>
+                    <p>Set timelines, manage resources, and lead cross-functional teams to achieve project goals on time.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag clark">Clark Ngo</span>
+                        <span class="mentor-tag christine">Christine Emano</span>
+                        <button class="topic-book-btn" data-topic="Project Coordination" data-mentor="">Book →</button>
+                    </div>
+                </div>
+                <div class="topic-card" data-mentors="christine">
+                    <div class="topic-icon">🎉</div>
+                    <h3>Event Management</h3>
+                    <p>Plan and execute events — logistics, budgets, vendors, and brand activations. From concept to completion.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag christine">Christine Emano</span>
+                        <button class="topic-book-btn" data-topic="Event Management" data-mentor="Christine Emano">Book →</button>
+                    </div>
+                </div>
+                <div class="topic-card" data-mentors="christine">
+                    <div class="topic-icon">🎨</div>
+                    <h3>Creative Direction</h3>
+                    <p>Craft visual stories and brand identities. Concept development, storytelling, and guiding creative projects.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag christine">Christine Emano</span>
+                        <button class="topic-book-btn" data-topic="Creative Direction" data-mentor="Christine Emano">Book →</button>
+                    </div>
+                </div>
+                <div class="topic-card" data-mentors="christine">
+                    <div class="topic-icon">📱</div>
+                    <h3>Social Media Management</h3>
+                    <p>Grow social accounts with effective content strategy, audience engagement, and analytics.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag christine">Christine Emano</span>
+                        <button class="topic-book-btn" data-topic="Social Media Management" data-mentor="Christine Emano">Book →</button>
+                    </div>
+                </div>
+                <div class="topic-card" data-mentors="christine">
+                    <div class="topic-icon">🎬</div>
+                    <h3>Production Management</h3>
+                    <p>Oversee event, video, or print production — budgeting, scheduling, and quality delivery.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag christine">Christine Emano</span>
+                        <button class="topic-book-btn" data-topic="Production Management" data-mentor="Christine Emano">Book →</button>
+                    </div>
+                </div>
+                <div class="topic-card" data-mentors="christine">
+                    <div class="topic-icon">✍️</div>
                     <h3>Copywriting</h3>
-                    <p>Learn the principles of effective copywriting, including how to create engaging, persuasive text for marketing, events, and branding. Ideal for aspiring writers and marketers.</p>
-                    <p><strong>Mentors:</strong> Christine Emano</p>
+                    <p>Write engaging, persuasive copy for marketing, events, and brand campaigns. Ideal for aspiring writers.</p>
+                    <div class="topic-footer">
+                        <span class="mentor-tag christine">Christine Emano</span>
+                        <button class="topic-book-btn" data-topic="Copywriting" data-mentor="Christine Emano">Book →</button>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- MENTORS -->
         <section id="mentors">
-            <h2>Mentors</h2>
+            <div class="section-header">
+                <h2>Meet the Mentors</h2>
+                <p class="section-subtitle">CityU graduate students ready to share their expertise</p>
+            </div>
             <div class="mentors-container">
                 <div class="mentor-card">
-                    <img src="assets/clark-ngo.png" alt="Clark Ngo">
+                    <div class="mentor-photo-wrap">
+                        <img src="assets/clark-ngo.png" alt="Clark Ngo">
+                    </div>
                     <h3>Clark Ngo</h3>
-                    <p>AI Engineer and Software Developer with a strong background in building RAG systems, IT consulting, and full-stack development.</p>
+                    <p class="mentor-title">AI Engineer & Software Developer</p>
+                    <p class="mentor-bio">Specializes in building RAG systems, IT consulting, and full-stack development. Graduate student at City University of Seattle.</p>
                     <div class="skills">
                         <span>AI & Machine Learning</span>
                         <span>Full-Stack Development</span>
                         <span>Data Engineering</span>
+                        <span>DevOps</span>
                     </div>
-                    <a href="https://www.linkedin.com/in/clarkngo" target="_blank" class="linkedin-btn">Connect on LinkedIn</a>
+                    <div class="mentor-actions">
+                        <button class="btn btn-primary book-mentor-btn" data-mentor="Clark Ngo">Book a Session</button>
+                        <a href="https://www.linkedin.com/in/clarkngo" target="_blank" rel="noopener" class="btn btn-linkedin">LinkedIn</a>
+                    </div>
                 </div>
                 <div class="mentor-card">
-                    <img src="assets/christine-emano.png" alt="Christine Emano">
+                    <div class="mentor-photo-wrap">
+                        <img src="assets/christine-emano.png" alt="Christine Emano">
+                    </div>
                     <h3>Christine Emano</h3>
-                    <p>Founder, event manager, and creative director with expertise in event production, project management, and social media marketing.</p>
+                    <p class="mentor-title">Founder & Creative Director</p>
+                    <p class="mentor-bio">Expert in event production, project management, and social media marketing. Graduate student at City University of Seattle.</p>
                     <div class="skills">
                         <span>Event Management</span>
                         <span>Project Coordination</span>
                         <span>Creative Direction</span>
+                        <span>Copywriting</span>
                     </div>
-                    <a href="https://www.linkedin.com/in/christineemano" target="_blank" class="linkedin-btn">Connect on LinkedIn</a>
+                    <div class="mentor-actions">
+                        <button class="btn btn-primary book-mentor-btn" data-mentor="Christine Emano">Book a Session</button>
+                        <a href="https://www.linkedin.com/in/christineemano" target="_blank" rel="noopener" class="btn btn-linkedin">LinkedIn</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-wrap">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="General inquiry about Tuklas" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="4" placeholder="Tell us what you're looking for..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tuklas. Contributors: Clark Ngo and Christine Emano.</p>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <img src="assets/tuklas-logo.png" alt="Tuklas Logo">
+                <span>Tuklas</span>
+            </div>
+            <p class="footer-tagline">Where Curiosity Leads to Connection.</p>
+            <p class="footer-copy">&copy; 2024 Tuklas. Contributors: Clark Ngo and Christine Emano.</p>
+        </div>
     </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            <h2 id="modal-title">Book a Session</h2>
+            <p class="modal-subtitle">Fill in your details and we'll get back to you within 24 hours.</p>
+            <form id="booking-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="book-name">Your Name</label>
+                        <input type="text" id="book-name" name="name" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-email">Email Address</label>
+                        <input type="email" id="book-email" name="email" placeholder="jane@example.com" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="book-mentor">Preferred Mentor</label>
+                        <select id="book-mentor" name="mentor">
+                            <option value="">No preference</option>
+                            <option value="Clark Ngo">Clark Ngo</option>
+                            <option value="Christine Emano">Christine Emano</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-topic">Topic of Interest</label>
+                        <select id="book-topic" name="topic">
+                            <option value="">Select a topic</option>
+                            <option>AI & Machine Learning</option>
+                            <option>Full-Stack Development</option>
+                            <option>Data Engineering</option>
+                            <option>DevOps</option>
+                            <option>Project Coordination</option>
+                            <option>Event Management</option>
+                            <option>Creative Direction</option>
+                            <option>Social Media Management</option>
+                            <option>Production Management</option>
+                            <option>Copywriting</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="book-type">Session Type</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="session-type" value="1:1" checked> One-on-One</label>
+                        <label><input type="radio" name="session-type" value="Group"> Group Workshop</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="book-message">What do you hope to learn?</label>
+                    <textarea id="book-message" name="message" rows="3" placeholder="Briefly describe your goal or background..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Send Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MATCH QUIZ MODAL -->
+    <div id="match-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="match-title">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="match-close" aria-label="Close">&times;</button>
+            <h2 id="match-title">Find Your Mentor Match ✦</h2>
+            <p class="modal-subtitle">Answer a few quick questions and we'll suggest the best fit for you.</p>
+            <div id="quiz-container"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
